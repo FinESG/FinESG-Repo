@@ -7,6 +7,22 @@ AI-powered ESG (Environmental, Social, Governance) analysis and reporting platfo
 ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
 ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
 
+## 👥 Team
+
+This project was developed by:
+
+- **[Ansh S](https://github.com/Anshs-12)**
+- **[Ananya](https://github.com/ananya-gh-05)**
+- **[Anshita](https://github.com/Anshitas-12)**
+- **[Deepak J](https://github.com/jdeepak1218)**
+- **[Shriya](https://github.com/Shriya-1206)**
+
+## 📄 Research Paper
+
+**[Read our research paper →](https://github.com/FinESG/research-paper)**
+
+*AI-Powered ESG Analysis using Fine-Tuned Language Models*
+
 ## ✨ Features
 
 - 🤖 **AI-Powered Analysis** - ESG-specialized language model (fingesg4)
@@ -70,26 +86,15 @@ Frontend will start on **<http://localhost:5173>**
 
 #### Option B: Use Fine-Tuned ESG Model (Recommended)
 
-**Step 1: Convert fingesg4 Model to GGUF**
+##### Step 1: Download fingesg4 Model
 
-```bash
-# Install dependencies
-pip install transformers peft accelerate
+**Download our pre-converted GGUF model:**
 
-# Run merge script (creates fingesg4_merged folder)
-python merge_fingesg4.py
+📥 **[Download fingesg4.gguf from Google Drive](https://drive.google.com/file/d/1fe995X-uJfJCgHq48QltGuukWTxrw9q8/view?usp=sharing)** (~3.1GB)
 
-# Clone llama.cpp for conversion
-git clone https://github.com/ggerganov/llama.cpp.git
-cd llama.cpp
+> **Note**: This is our custom ESG-specialized model, fine-tuned on financial and sustainability reporting data.
 
-# Convert to GGUF format
-python convert_hf_to_gguf.py ../fingesg4_merged --outtype f16 --outfile fingesg4.gguf
-```
-
-> **Note**: The `merge_fingesg4.py` script downloads the fingesg4 adapter from [HuggingFace](https://huggingface.co/DeepakJ1218/fingesg4) and merges it with Qwen 2.5-1.5B base model.
-
-**Step 2: Import to LM Studio (CRITICAL: Folder Structure)**
+##### Step 2: Import to LM Studio (CRITICAL: Folder Structure)**
 
 LM Studio requires a **double-nested folder structure**:
 
@@ -229,11 +234,7 @@ Contributions welcome! Please follow these steps:
 4. Push to branch (`git push origin feature/AmazingFeature`)
 5. Open Pull Request
 
-## 📄 License
-
-This project is licensed under the MIT License.
-
-## 🙏 Acknowledgments
+## Acknowledgments
 
 - **Qwen Team** - Base language model
 - **LM Studio** - Optimized inference engine
